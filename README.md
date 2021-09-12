@@ -28,3 +28,24 @@ See instructions in [DEVELOPMENT.md](./DEVELOPMENT.md)
 ## Contributing
 To contribute to this project, please read through [CONTRIBUTING.md](./CONTRIBUTING.md)
 
+## Custom Steps
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+updated cp script
+updated python version
+use python3
+add aws configure
+install jq
+give ec2 full permission
+updated us east-2
+check for hard code account number
+use amazonlinux
+pip3 install xxx
+
+## Docker control
+docker images
+docker tag a3494180bcfe 533753950585.dkr.ecr.us-east-2.amazonaws.com/sagemaker-spark:1
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 533753950585.dkr.ecr.us-east-2.amazonaws.com
+docker push 533753950585.dkr.ecr.us-east-2.amazonaws.com/sagemaker-spark:1
