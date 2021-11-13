@@ -58,4 +58,4 @@ if __name__ == "__main__":
     salesDF.select("date", "sale", double_udf_int("sale").alias("sale_double")).write.json(outputPath)
     print("Saved data")
     
-    import bertopic
+    import stanford_openie
