@@ -57,3 +57,5 @@ if __name__ == "__main__":
     # Save transformed data set to disk
     salesDF.select("date", "sale", double_udf_int("sale").alias("sale_double")).write.json(outputPath)
     print("Saved data")
+    
+    help("modules")
