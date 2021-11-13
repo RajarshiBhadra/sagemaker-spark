@@ -59,6 +59,14 @@ if __name__ == "__main__":
     print("Saved data")
     
     from openie import StanfordOpenIE
-    from nltk.tokenize import PunktSentenceTokenizer
+    from nltk.corpus import wordnet
     import bertopic
+    
+#     from nltk.corpus import wordnet
+#     ant = []
+#     for ss in wordnet.synsets(emotion):
+#         for lemma in ss.lemmas():
+#             if lemma.antonyms():
+#                 ant.append(lemma.antonyms()[0].name())
+#     return ant
     
