@@ -67,5 +67,5 @@ if __name__ == "__main__":
         for lemma in ss.lemmas():
             if lemma.antonyms():
                 ant.append(lemma.antonyms()[0].name())
-    return ant
+    print(ant)
     
