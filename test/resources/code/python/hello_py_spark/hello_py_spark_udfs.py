@@ -154,6 +154,7 @@ def emotion_fit(clean_cell):
         import os
         os.listdir(".")
         print("1st Check")
+        os.environ['HOME'] = '/home/hadoop'
         nrclex_out = NRCLex(str(clean_cell))
         print("1st Check Completed")
         out = negative_emotion_handler(nrclex_out)
