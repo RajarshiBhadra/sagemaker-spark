@@ -51,6 +51,14 @@ def f_sent(s):
     getscore = getscore['compound']
     print("Performing Sentiment Analysis")
     return getscore
+def f_emo(s):
+    lower_s = s.lower()
+    out = emotion_fit(lower_s)
+    return out
+def f1_emo(s):
+    category = ['fear', 'anger', 'negative', 'disgust', 'sadness',
+                'anticipation', 'trust', 'surprise', 'positive', 'joy']
+    return category
 
 def ant_finder(emotion):
         """
@@ -165,6 +173,8 @@ def emotion_fit(clean_cell):
         list_of_emotions.append(row)
 
         return list_of_emotions[0]
+
+
 
 
 

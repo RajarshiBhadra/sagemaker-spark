@@ -110,4 +110,14 @@ if __name__ == "__main__":
     df_sent = df_processed.withColumn((out_col), udf(udfs.f_sent, t)(in_col))
     df_sent.show()
 
+    t_score = ArrayType(IntegerType())
+    t_label = ArrayType(StringType())
+    out_col = ['emotion_score', 'emotion_label']
+    in_col = "words"
+    df_processed_emo = df_processed.withColumn((out_col[1]),
+                                               udf(udfs.f1_emo, t_label)(in_col))
+    output = df_processed_emo.withColumn((out_col[0]), udf(udfs.f_emo, t_score)(
+        in_col))
+    output.show()
+
 
