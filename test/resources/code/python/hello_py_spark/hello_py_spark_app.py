@@ -101,6 +101,13 @@ if __name__ == "__main__":
     in_col  = "text"
     out_col ="words"
     t = StringType()
-    df = df.withColumn(out_col, udf(udfs.f, t)(in_col))
-    df.show()
+    df_processed = df.withColumn(out_col, udf(udfs.f, t)(in_col))
+    df_processed.show()
+
+    t = FloatType()
+    out_col = "sentiment_score"
+    in_col = "words"
+    df_sent = df_processed.withColumn((out_col), udf(udfs.f_sent, t)(in_col))
+    df_sent.show()
+
 
