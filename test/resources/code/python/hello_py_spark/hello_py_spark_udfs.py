@@ -13,6 +13,8 @@
 def double_x(x):
     return x + x
 
+import re
+import wordninja
 
 def f(s):
     s = re.sub(
