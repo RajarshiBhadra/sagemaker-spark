@@ -92,6 +92,8 @@ if __name__ == "__main__":
     salesDF.select("date", "sale", double_udf_int("sale").alias("sale_double")).write.json(outputPath)
     print("Saved data")
 
+    print(nltk.__version__)
+
     data = [{"text": 'This is a great book', "primary_key": 1, "batch_id": 1},
             {"text": 'This is a great book', "primary_key": 1, "batch_id": 1},
             {"text": 'This is a great book', "primary_key": 1, "batch_id": 1},
