@@ -27,10 +27,10 @@ if __name__ == "__main__":
 #     parser.add_argument("--input", type=str, help="path to input data")
 #     parser.add_argument("--output", required=False, type=str, help="path to output data")
 #     args = parser.parse_args()
-#     spark = SparkSession.builder.appName("SparkContainerTestApp").getOrCreate()
-#     print("Created spark context")
-#     sqlContext = SQLContext(spark.sparkContext)
-#     print("Created sql context")
+    spark = SparkSession.builder.appName("SparkContainerTestApp").getOrCreate()
+    print("Created spark context")
+    sqlContext = SQLContext(spark.sparkContext)
+    print("Created sql context")
 
 #     # Load test data set
 #     inputPath = args.input
