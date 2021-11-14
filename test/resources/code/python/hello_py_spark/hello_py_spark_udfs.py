@@ -15,7 +15,7 @@ def double_x(x):
 
 import re
 import wordninja
-import NRCLex
+from nrclex import NRCLex
 from nltk.corpus import wordnet
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
