@@ -154,7 +154,9 @@ def emotion_fit(clean_cell):
         import os
         os.listdir(".")
         print("1st Check")
-        out = negative_emotion_handler(NRCLex(str(clean_cell)))
+        nrclex_out = NRCLex(str(clean_cell))
+        print("1st Check Completed")
+        out = negative_emotion_handler(nrclex_out)
 
         temp = []
         for key in out.keys():
