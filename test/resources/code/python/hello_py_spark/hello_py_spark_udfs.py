@@ -51,14 +51,15 @@ def f_sent(s):
     getscore = getscore['compound']
     print("Performing Sentiment Analysis")
     return getscore
-def f_emo(s):
-    lower_s = s.lower()
-    out = emotion_fit(lower_s)
-    return out
 def f1_emo(s):
     category = ['fear', 'anger', 'negative', 'disgust', 'sadness',
                 'anticipation', 'trust', 'surprise', 'positive', 'joy']
     return category
+def f_emo(s):
+    lower_s = s.lower()
+    out = emotion_fit(lower_s)
+    return out
+
 
 def ant_finder(emotion):
         """
@@ -68,8 +69,6 @@ def ant_finder(emotion):
         """
         # nltk.data.path.append("/root/nltk_data")
         # nltk.data.path.append('/libs/nltk_data/')
-        import nltk
-        help("nltk")
 
         ant = []
         for ss in wordnet.synsets(emotion):
@@ -122,6 +121,7 @@ def negative_emotion_handler(obj):
 
                     # Method 1: find opposite of emotive word and rerun NRC
                     # on it
+                    print("Step 2")
                     ant = ant_finder(w)
                     if (ant):
                         temp = NRCLex(ant[0])
@@ -151,9 +151,9 @@ def emotion_fit(clean_cell):
 
         list_of_emotions = []
         pos, neg = '', ''
-        help("nltk")
         import os
         os.listdir(".")
+        print("1st Check")
         out = negative_emotion_handler(NRCLex(str(clean_cell)))
 
         temp = []
