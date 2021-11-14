@@ -104,13 +104,11 @@ if __name__ == "__main__":
         Transformer, HasInputCol, HasOutputCol,
         DefaultParamsReadable, DefaultParamsWritable):
 
-        @keyword_only
         def __init__(self, inputCol=None, outputCol=None, stopwords=None):
             super(TextPreprocessor, self).__init__()
             kwargs = self._input_kwargs
             self.setParams(**kwargs)
 
-        @keyword_only
         def setParams(self, inputCol=None, outputCol=None, stopwords=None):
             kwargs = self._input_kwargs
             return self._set(**kwargs)
@@ -159,13 +157,13 @@ if __name__ == "__main__":
         Transformer, HasInputCol, HasOutputCol,
         DefaultParamsReadable, DefaultParamsWritable):
 
-        @keyword_only
+        
         def __init__(self, inputCol=None, outputCols=None, stopwords=None):
             super(SentimentAnalyzer, self).__init__()
             kwargs = self._input_kwargs
             self.setParams(**kwargs)
 
-        @keyword_only
+        
         def setParams(self, inputCol=None, outputCol=None, stopwords=None):
             kwargs = self._input_kwargs
             return self._set(**kwargs)
@@ -303,13 +301,13 @@ if __name__ == "__main__":
         Transformer, HasInputCol, HasOutputCols,
         DefaultParamsReadable, DefaultParamsWritable):
 
-        @keyword_only
+        
         def __init__(self, inputCol=None, outputCol=None, stopwords=None):
             super(EmotionAnalyzer, self).__init__()
             kwargs = self._input_kwargs
             self.setParams(**kwargs)
 
-        @keyword_only
+        
         def setParams(self, inputCol=None, outputCol=None, stopwords=None):
             kwargs = self._input_kwargs
             return self._set(**kwargs)
