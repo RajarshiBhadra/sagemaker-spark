@@ -12,3 +12,35 @@
 # language governing permissions and limitations under the License.
 def double_x(x):
     return x + x
+
+
+def f(s):
+    s = re.sub(
+        r"(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{"
+        r"4}|\d{3}[-\.\s]??\d{4})",
+        '', s)
+    s = re.sub(
+        r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:["
+        r"^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\(["
+        r"^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))",
+        '', s)
+    s = re.sub(r"\w+@\w+.[\w+]{2,4}$", '', s)
+
+    s = s.replace(":", " ").replace(";", " ").replace("-", " ")
+
+    s = s.replace('*', '').replace(',', ' ')
+
+    s = s.replace("(", " ").replace(')', ' ')
+
+    s = re.sub('\.\.+', '. ', s)
+
+    s = s.replace('  ', ' ')
+
+    for i in s.split():
+        if '#' in i:
+            s = s.replace(i, ' '.join(wordninja.split(i)))
+    return s
+
+
+
+
