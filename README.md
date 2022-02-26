@@ -46,6 +46,6 @@ To contribute to this project, please read through [CONTRIBUTING.md](./CONTRIBUT
 
 ## Docker control
 - docker images  
-- docker tag a3494180bcfe 533753950585.dkr.ecr.us-east-2.amazonaws.com/sagemaker-spark:1  
-- aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 533753950585.dkr.ecr.us-east-2.amazonaws.com  
-- docker push 533753950585.dkr.ecr.us-east-2.amazonaws.com/sagemaker-spark:1  
+- docker tag a3494180bcfe 533xxxx.dkr.ecr.us-east-2.amazonaws.com/sagemaker-spark:1  
+- aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 5337xxxxx.dkr.ecr.us-east-2.amazonaws.com  
+- docker push 5337xxxxx.dkr.ecr.us-east-2.amazonaws.com/sagemaker-spark:1  
